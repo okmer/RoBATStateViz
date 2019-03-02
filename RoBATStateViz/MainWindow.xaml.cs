@@ -24,5 +24,15 @@ namespace RoBATStateViz
         {
             InitializeComponent();
         }
+
+        private void IncButton_Click(object sender, RoutedEventArgs e)
+        {
+            StateViz.State += 1;
+        }
+
+        private void DecButton_Click(object sender, RoutedEventArgs e)
+        {
+            StateViz.State -= 1;
+        }
     }
 }

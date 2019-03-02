@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RoBATStateViz"
+        xmlns:assets="clr-namespace:RoBATStateViz.Assets"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <Button Content="+" Name="IncButton" Click="IncButton_Click"/>
+            <Button Content="-" Name="DecButton" Click="DecButton_Click"/>
+            <assets:RoBATStates x:Name="StateViz"/>
+        </StackPanel>
     </Grid>
 </Window>
