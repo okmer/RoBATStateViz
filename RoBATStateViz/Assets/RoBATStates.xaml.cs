@@ -39,8 +39,6 @@ namespace RoBATStateViz.Assets
         {
             InitializeComponent();
             DataContext = this;
-
-            State = 0;
         }
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
