@@ -6,7 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="25" d:DesignWidth="200">
     <UserControl.Resources>
-        <SolidColorBrush x:Key="IdleColor" Color="LightGray" />
+        <SolidColorBrush x:Key="InactiveColor" Color="LightGray" />
         <SolidColorBrush x:Key="ActiveColor" Color="LightCoral" />
     </UserControl.Resources>
     <Grid>
@@ -14,7 +14,7 @@
             <Ellipse Name="EllipseO1" Width="25" Height="25" Canvas.Left="0" Canvas.Top="0" Stroke="Black">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
-                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Path=Output1}" Value="true">
                                 <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
@@ -26,7 +26,7 @@
             <Ellipse Name="EllipseO2" Width="25" Height="25" Canvas.Left="25" Canvas.Top="0" Stroke="Black">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
-                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Path=Output2}" Value="true">
                                 <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
@@ -38,7 +38,7 @@
             <Ellipse Name="EllipseO3" Width="25" Height="25" Canvas.Left="50" Canvas.Top="0" Stroke="Black">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
-                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Path=Output3}" Value="true">
                                 <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
@@ -50,7 +50,7 @@
             <Ellipse Name="EllipseO4" Width="25" Height="25" Canvas.Left="75" Canvas.Top="0" Stroke="Black">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
-                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Path=Output4}" Value="true">
                                 <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
@@ -62,7 +62,7 @@
             <Ellipse Name="EllipseO5" Width="25" Height="25" Canvas.Left="100" Canvas.Top="0" Stroke="Black">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
-                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Path=Output5}" Value="true">
                                 <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
@@ -74,7 +74,7 @@
             <Ellipse Name="EllipseO6" Width="25" Height="25" Canvas.Left="125" Canvas.Top="0" Stroke="Black">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
-                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Path=Output6}" Value="true">
                                 <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
@@ -86,7 +86,7 @@
             <Ellipse Name="EllipseO7" Width="25" Height="25" Canvas.Left="150" Canvas.Top="0" Stroke="Black">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
-                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Path=Output7}" Value="true">
                                 <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
@@ -98,7 +98,7 @@
             <Ellipse Name="EllipseO8" Width="25" Height="25" Canvas.Left="175" Canvas.Top="0" Stroke="Black">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
-                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Path=Output8}" Value="true">
                                 <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>

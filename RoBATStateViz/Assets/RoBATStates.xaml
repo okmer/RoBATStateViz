@@ -6,6 +6,11 @@
              xmlns:local="clr-namespace:RoBATStateViz.Assets"
              mc:Ignorable="d" 
              d:DesignHeight="265" d:DesignWidth="150">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="InactiveColor" Color="LightGray" />
+        <SolidColorBrush x:Key="ActiveColor" Color="LightGreen" />
+        <SolidColorBrush x:Key="ErrorColor" Color="LightCoral" />
+    </UserControl.Resources>
     <Canvas Width="150" Height="265">
             <Line X1="75" Y1="25" X2="25" Y2="75" Stroke="Black"/>
             <Line X1="75" Y1="25" X2="125" Y2="75" Stroke="Black"/>
@@ -24,10 +29,10 @@
         <Ellipse Name="EllipseClosed" Width="50" Height="50" Canvas.Left="50" Canvas.Top="0" Stroke="Black">
             <Ellipse.Style>
                 <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="LightGray"/>
+                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Path=State}" Value="0">
-                            <Setter Property="Fill" Value="LightBlue"/>
+                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
@@ -38,10 +43,10 @@
         <Ellipse Name="EllipseClosing" Width="50" Height="50" Canvas.Left="0" Canvas.Top="50" Stroke="Black">
             <Ellipse.Style>
                 <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="LightGray"/>
+                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Path=State}" Value="1">
-                            <Setter Property="Fill" Value="LightBlue"/>
+                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
@@ -52,10 +57,10 @@
         <Ellipse Name="EllipseOpening" Width="50" Height="50" Canvas.Left="100" Canvas.Top="50" Stroke="Black">
             <Ellipse.Style>
                 <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="LightGray"/>
+                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Path=State}" Value="2">
-                            <Setter Property="Fill" Value="LightBlue"/>
+                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
@@ -66,10 +71,10 @@
         <Ellipse Name="EllipseIdle" Width="50" Height="50" Canvas.Left="50" Canvas.Top="100" Stroke="Black">
             <Ellipse.Style>
                 <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="LightGray"/>
+                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Path=State}" Value="3">
-                            <Setter Property="Fill" Value="LightBlue"/>
+                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
@@ -80,10 +85,10 @@
         <Ellipse Name="EllipsePositioning" Width="50" Height="50" Canvas.Left="0" Canvas.Top="150" Stroke="Black">
             <Ellipse.Style>
                 <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="LightGray"/>
+                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Path=State}" Value="4">
-                            <Setter Property="Fill" Value="LightBlue"/>
+                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
@@ -94,10 +99,10 @@
         <Ellipse Name="EllipsePositioned" Width="50" Height="50" Canvas.Left="0" Canvas.Top="215" Stroke="Black">
             <Ellipse.Style>
                 <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="LightGray"/>
+                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Path=State}" Value="5">
-                            <Setter Property="Fill" Value="LightBlue"/>
+                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
@@ -108,10 +113,10 @@
         <Ellipse Name="EllipseScanning" Width="50" Height="50" Canvas.Left="100" Canvas.Top="150" Stroke="Black">
             <Ellipse.Style>
                 <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="LightGray"/>
+                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Path=State}" Value="6">
-                            <Setter Property="Fill" Value="LightBlue"/>
+                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
@@ -122,10 +127,10 @@
         <Ellipse Name="EllipseError" Width="50" Height="50" Canvas.Left="100" Canvas.Top="215" Stroke="Black" StrokeDashArray="3,1">
             <Ellipse.Style>
                 <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="LightGray"/>
+                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Path=State}" Value="7">
-                            <Setter Property="Fill" Value="Red"/>
+                            <Setter Property="Fill" Value="{DynamicResource ErrorColor}"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
