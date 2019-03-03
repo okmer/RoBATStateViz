@@ -11,7 +11,7 @@
     </UserControl.Resources>
     <Viewbox>
         <Canvas Width="200" Height="25">
-            <Ellipse Name="EllipseO1" Width="25" Height="25" Canvas.Left="0" Canvas.Top="0" Stroke="Black">
+            <Ellipse Name="EllipseO1" Width="25" Height="25" Canvas.Left="0" Canvas.Top="0" Stroke="Black" MouseDown="EllipseO_MouseDown">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
                         <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
@@ -23,7 +23,7 @@
                     </Style>
                 </Ellipse.Style>
             </Ellipse>
-            <Ellipse Name="EllipseO2" Width="25" Height="25" Canvas.Left="25" Canvas.Top="0" Stroke="Black">
+            <Ellipse Name="EllipseO2" Width="25" Height="25" Canvas.Left="25" Canvas.Top="0" Stroke="Black" MouseDown="EllipseO_MouseDown">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
                         <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
@@ -35,7 +35,7 @@
                     </Style>
                 </Ellipse.Style>
             </Ellipse>
-            <Ellipse Name="EllipseO3" Width="25" Height="25" Canvas.Left="50" Canvas.Top="0" Stroke="Black">
+            <Ellipse Name="EllipseO3" Width="25" Height="25" Canvas.Left="50" Canvas.Top="0" Stroke="Black" MouseDown="EllipseO_MouseDown">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
                         <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
@@ -47,7 +47,7 @@
                     </Style>
                 </Ellipse.Style>
             </Ellipse>
-            <Ellipse Name="EllipseO4" Width="25" Height="25" Canvas.Left="75" Canvas.Top="0" Stroke="Black">
+            <Ellipse Name="EllipseO4" Width="25" Height="25" Canvas.Left="75" Canvas.Top="0" Stroke="Black" MouseDown="EllipseO_MouseDown">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
                         <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
@@ -59,7 +59,7 @@
                     </Style>
                 </Ellipse.Style>
             </Ellipse>
-            <Ellipse Name="EllipseO5" Width="25" Height="25" Canvas.Left="100" Canvas.Top="0" Stroke="Black">
+            <Ellipse Name="EllipseO5" Width="25" Height="25" Canvas.Left="100" Canvas.Top="0" Stroke="Black" MouseDown="EllipseO_MouseDown">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
                         <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
@@ -71,7 +71,7 @@
                     </Style>
                 </Ellipse.Style>
             </Ellipse>
-            <Ellipse Name="EllipseO6" Width="25" Height="25" Canvas.Left="125" Canvas.Top="0" Stroke="Black">
+            <Ellipse Name="EllipseO6" Width="25" Height="25" Canvas.Left="125" Canvas.Top="0" Stroke="Black" MouseDown="EllipseO_MouseDown">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
                         <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
@@ -83,7 +83,7 @@
                     </Style>
                 </Ellipse.Style>
             </Ellipse>
-            <Ellipse Name="EllipseO7" Width="25" Height="25" Canvas.Left="150" Canvas.Top="0" Stroke="Black">
+            <Ellipse Name="EllipseO7" Width="25" Height="25" Canvas.Left="150" Canvas.Top="0" Stroke="Black" MouseDown="EllipseO_MouseDown">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
                         <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
@@ -95,7 +95,7 @@
                     </Style>
                 </Ellipse.Style>
             </Ellipse>
-            <Ellipse Name="EllipseO8" Width="25" Height="25" Canvas.Left="175" Canvas.Top="0" Stroke="Black">
+            <Ellipse Name="EllipseO8" Width="25" Height="25" Canvas.Left="175" Canvas.Top="0" Stroke="Black" MouseDown="EllipseO_MouseDown">
                 <Ellipse.Style>
                     <Style TargetType="{x:Type Ellipse}">
                         <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>

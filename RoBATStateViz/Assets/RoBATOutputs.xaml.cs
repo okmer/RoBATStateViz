@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -115,6 +116,23 @@ namespace RoBATStateViz.Assets
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private void EllipseO_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var ellipse = sender as Ellipse;
+
+            if (Keyboard.IsKeyDown(Key.LeftShift) && Keyboard.IsKeyDown(Key.LeftCtrl))
+            {
+                var dataContext = ellipse.DataContext;
+
+                Type dcType = dataContext?.GetType();
+                PropertyInfo dcPropInfo = dcType.GetProperty($"Output{ellipse.Name.Replace("EllipseO", "")}");
+
+                bool? currentValue = dcPropInfo?.GetValue(dataContext) as bool?;
+
+                dcPropInfo?.SetValue(dataContext, !currentValue.Value, null);
+            }
         }
     }
 }
