@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="RoBATStateViz.Assets.RoBATInputs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="200">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="IdleColor" Color="LightGray" />
+        <SolidColorBrush x:Key="ActiveColor" Color="LightGreen" />
+    </UserControl.Resources>
+    <Grid>
+        <Canvas Width="200" Height="25">
+            <Ellipse Name="EllipseI1" Width="25" Height="25" Canvas.Left="0" Canvas.Top="0" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Input1}" Value="true">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <Ellipse Name="EllipseI2" Width="25" Height="25" Canvas.Left="25" Canvas.Top="0" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Input2}" Value="true">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <Ellipse Name="EllipseI3" Width="25" Height="25" Canvas.Left="50" Canvas.Top="0" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Input3}" Value="true">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <Ellipse Name="EllipseI4" Width="25" Height="25" Canvas.Left="75" Canvas.Top="0" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Input4}" Value="true">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <Ellipse Name="EllipseI5" Width="25" Height="25" Canvas.Left="100" Canvas.Top="0" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Input5}" Value="true">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <Ellipse Name="EllipseI6" Width="25" Height="25" Canvas.Left="125" Canvas.Top="0" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Input6}" Value="true">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <Ellipse Name="EllipseI7" Width="25" Height="25" Canvas.Left="150" Canvas.Top="0" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Input7}" Value="true">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <Ellipse Name="EllipseI8" Width="25" Height="25" Canvas.Left="175" Canvas.Top="0" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource IdleColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Input8}" Value="true">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+        </Canvas>
+    </Grid>
+</UserControl>

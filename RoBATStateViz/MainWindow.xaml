@@ -3,15 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RoBATStateViz"
         xmlns:assets="clr-namespace:RoBATStateViz.Assets"
         mc:Ignorable="d"
-        Title="RoBATStateViz" Height="365" Width="200" WindowStyle="ToolWindow" ResizeMode="CanMinimize">
+        Title="RoBATStateViz" Height="435" Width="220" WindowStyle="ToolWindow" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel>
             <Button Content="+" Name="IncButton" Click="IncButton_Click"/>
             <Button Content="-" Name="DecButton" Click="DecButton_Click"/>
             <assets:RoBATStates x:Name="StateViz" Margin="0,10"/>
+            <assets:RoBATInputs x:Name="InputsViz" Margin="0,0"/>
+            <assets:RoBATOutputs x:Name="OutputsViz" Margin="0,10"/>
         </StackPanel>
     </Grid>
 </Window>

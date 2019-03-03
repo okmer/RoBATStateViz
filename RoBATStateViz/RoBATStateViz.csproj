@@ -55,10 +55,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Assets\RoBATOutputs.xaml.cs">
+      <DependentUpon>RoBATOutputs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\RoBATInputs.xaml.cs">
+      <DependentUpon>RoBATInputs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assets\RoBATStates.xaml.cs">
       <DependentUpon>RoBATStates.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\StateToColorConverter.cs" />
+    <Page Include="Assets\RoBATOutputs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\RoBATInputs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
