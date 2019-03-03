@@ -1,19 +1,10 @@
-﻿using RoBATStateViz.Assets;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Diagnostics;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Threading;
+using RoBATStateViz.Assets;
+using RoBATStateViz.Helpers;
 
 namespace RoBATStateViz
 {
@@ -22,9 +13,22 @@ namespace RoBATStateViz
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string windowTitle;
+        private DispatcherTimer dispatcherTimer;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            windowTitle = Title;
+            dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += (s, e) =>
+            {
+                var uptime = DateTime.Now - Process.GetCurrentProcess().StartTime;
+                Title = $"{windowTitle} [{uptime.ToCompactPrettyString()}]";
+            };
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 5);
+            dispatcherTimer.Start();
         }
 
         private void IncButton_Click(object sender, RoutedEventArgs e)
