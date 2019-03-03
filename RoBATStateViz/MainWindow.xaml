@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:assets="clr-namespace:RoBATStateViz.Assets"
         mc:Ignorable="d"
-        Title="RoBATStateViz" Height="435" Width="220" WindowStyle="ToolWindow" ResizeMode="CanMinimize">
+        Title="RoBATStateViz" Height="450" Width="200" WindowStyle="ToolWindow" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel>
             <Button Content="+" Name="IncButton" Click="IncButton_Click"/>
             <Button Content="-" Name="DecButton" Click="DecButton_Click"/>
-            <assets:RoBATStates x:Name="StateViz" Margin="0,10"/>
-            <assets:RoBATInputs x:Name="InputsViz" Margin="0,0"/>
-            <assets:RoBATOutputs x:Name="OutputsViz" Margin="0,10"/>
+            <assets:RoBATStates x:Name="StateViz" Margin="10,10"/>
+            <assets:RoBATInputs x:Name="InputsViz" Margin="10,0"/>
+            <assets:RoBATOutputs x:Name="OutputsViz" Margin="10,10"/>
         </StackPanel>
     </Grid>
 </Window>

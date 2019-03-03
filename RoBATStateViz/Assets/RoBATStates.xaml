@@ -11,7 +11,8 @@
         <SolidColorBrush x:Key="ActiveColor" Color="LightGreen" />
         <SolidColorBrush x:Key="ErrorColor" Color="LightCoral" />
     </UserControl.Resources>
-    <Canvas Width="150" Height="265">
+    <Viewbox>
+        <Canvas Width="150" Height="265">
             <Line X1="75" Y1="25" X2="25" Y2="75" Stroke="Black"/>
             <Line X1="75" Y1="25" X2="125" Y2="75" Stroke="Black"/>
 
@@ -26,116 +27,117 @@
             <Line X1="25" Y1="240" X2="75" Y2="190" Stroke="Black"/>
             <Line X1="75" Y1="190" X2="75" Y2="125" Stroke="Black"/>
 
-        <Ellipse Name="EllipseClosed" Width="50" Height="50" Canvas.Left="50" Canvas.Top="0" Stroke="Black">
-            <Ellipse.Style>
-                <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Path=State}" Value="0">
-                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Ellipse.Style>
-        </Ellipse>
-        <TextBlock Text="Closed" Width="50" Height="50" Canvas.Left="50" Canvas.Top="0" TextAlignment="Center" Margin="0,15"/>
+            <Ellipse Name="EllipseClosed" Width="50" Height="50" Canvas.Left="50" Canvas.Top="0" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=State}" Value="0">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <TextBlock Text="Closed" Width="50" Height="50" Canvas.Left="50" Canvas.Top="0" TextAlignment="Center" Margin="0,15"/>
 
-        <Ellipse Name="EllipseClosing" Width="50" Height="50" Canvas.Left="0" Canvas.Top="50" Stroke="Black">
-            <Ellipse.Style>
-                <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Path=State}" Value="1">
-                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Ellipse.Style>
-        </Ellipse>
-        <TextBlock Text="Closing" Width="50" Height="50" Canvas.Left="0" Canvas.Top="50" TextAlignment="Center" Margin="0,15"/>
+            <Ellipse Name="EllipseClosing" Width="50" Height="50" Canvas.Left="0" Canvas.Top="50" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=State}" Value="1">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <TextBlock Text="Closing" Width="50" Height="50" Canvas.Left="0" Canvas.Top="50" TextAlignment="Center" Margin="0,15"/>
 
-        <Ellipse Name="EllipseOpening" Width="50" Height="50" Canvas.Left="100" Canvas.Top="50" Stroke="Black">
-            <Ellipse.Style>
-                <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Path=State}" Value="2">
-                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Ellipse.Style>
-        </Ellipse>
-        <TextBlock Text="Opening" Width="50" Height="50" Canvas.Left="100" Canvas.Top="50" TextAlignment="Center" Margin="0,15"/>
+            <Ellipse Name="EllipseOpening" Width="50" Height="50" Canvas.Left="100" Canvas.Top="50" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=State}" Value="2">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <TextBlock Text="Opening" Width="50" Height="50" Canvas.Left="100" Canvas.Top="50" TextAlignment="Center" Margin="0,15"/>
 
-        <Ellipse Name="EllipseIdle" Width="50" Height="50" Canvas.Left="50" Canvas.Top="100" Stroke="Black">
-            <Ellipse.Style>
-                <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Path=State}" Value="3">
-                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Ellipse.Style>
-        </Ellipse>
-        <TextBlock Text="Idle" Width="50" Height="50" Canvas.Left="50" Canvas.Top="100" TextAlignment="Center" Margin="0,15"/>
+            <Ellipse Name="EllipseIdle" Width="50" Height="50" Canvas.Left="50" Canvas.Top="100" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=State}" Value="3">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <TextBlock Text="Idle" Width="50" Height="50" Canvas.Left="50" Canvas.Top="100" TextAlignment="Center" Margin="0,15"/>
 
-        <Ellipse Name="EllipsePositioning" Width="50" Height="50" Canvas.Left="0" Canvas.Top="150" Stroke="Black">
-            <Ellipse.Style>
-                <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Path=State}" Value="4">
-                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Ellipse.Style>
-        </Ellipse>
-        <TextBlock Text="Position" Width="50" Height="50" Canvas.Left="0" Canvas.Top="150" TextAlignment="Center" Margin="0,15"/>
+            <Ellipse Name="EllipsePositioning" Width="50" Height="50" Canvas.Left="0" Canvas.Top="150" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=State}" Value="4">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <TextBlock Text="Position" Width="50" Height="50" Canvas.Left="0" Canvas.Top="150" TextAlignment="Center" Margin="0,15"/>
 
-        <Ellipse Name="EllipsePositioned" Width="50" Height="50" Canvas.Left="0" Canvas.Top="215" Stroke="Black">
-            <Ellipse.Style>
-                <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Path=State}" Value="5">
-                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Ellipse.Style>
-        </Ellipse>
-        <TextBlock Text="Found" Width="50" Height="50" Canvas.Left="0" Canvas.Top="215" TextAlignment="Center" Margin="0,15"/>
+            <Ellipse Name="EllipsePositioned" Width="50" Height="50" Canvas.Left="0" Canvas.Top="215" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=State}" Value="5">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <TextBlock Text="Found" Width="50" Height="50" Canvas.Left="0" Canvas.Top="215" TextAlignment="Center" Margin="0,15"/>
 
-        <Ellipse Name="EllipseScanning" Width="50" Height="50" Canvas.Left="100" Canvas.Top="150" Stroke="Black">
-            <Ellipse.Style>
-                <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Path=State}" Value="6">
-                            <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Ellipse.Style>
-        </Ellipse>
-        <TextBlock Text="Scan" Width="50" Height="50" Canvas.Left="100" Canvas.Top="150" TextAlignment="Center" Margin="0,15"/>
+            <Ellipse Name="EllipseScanning" Width="50" Height="50" Canvas.Left="100" Canvas.Top="150" Stroke="Black">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=State}" Value="6">
+                                <Setter Property="Fill" Value="{DynamicResource ActiveColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <TextBlock Text="Scan" Width="50" Height="50" Canvas.Left="100" Canvas.Top="150" TextAlignment="Center" Margin="0,15"/>
 
-        <Ellipse Name="EllipseError" Width="50" Height="50" Canvas.Left="100" Canvas.Top="215" Stroke="Black" StrokeDashArray="3,1">
-            <Ellipse.Style>
-                <Style TargetType="{x:Type Ellipse}">
-                    <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Path=State}" Value="7">
-                            <Setter Property="Fill" Value="{DynamicResource ErrorColor}"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Ellipse.Style>
-        </Ellipse>
-        <TextBlock Text="Error" Width="50" Height="50" Canvas.Left="100" Canvas.Top="215" TextAlignment="Center" Margin="0,15"/>
-    </Canvas>
+            <Ellipse Name="EllipseError" Width="50" Height="50" Canvas.Left="100" Canvas.Top="215" Stroke="Black" StrokeDashArray="3,1">
+                <Ellipse.Style>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Fill" Value="{DynamicResource InactiveColor}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=State}" Value="7">
+                                <Setter Property="Fill" Value="{DynamicResource ErrorColor}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Ellipse.Style>
+            </Ellipse>
+            <TextBlock Text="Error" Width="50" Height="50" Canvas.Left="100" Canvas.Top="215" TextAlignment="Center" Margin="0,15"/>
+        </Canvas>
+    </Viewbox>
 </UserControl>

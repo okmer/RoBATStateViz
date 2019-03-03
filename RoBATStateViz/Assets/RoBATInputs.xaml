@@ -9,7 +9,7 @@
         <SolidColorBrush x:Key="InactiveColor" Color="LightGray" />
         <SolidColorBrush x:Key="ActiveColor" Color="LightGreen" />
     </UserControl.Resources>
-    <Grid>
+    <Viewbox>
         <Canvas Width="200" Height="25">
             <Ellipse Name="EllipseI1" Width="25" Height="25" Canvas.Left="0" Canvas.Top="0" Stroke="Black">
                 <Ellipse.Style>
@@ -108,5 +108,5 @@
                 </Ellipse.Style>
             </Ellipse>
         </Canvas>
-    </Grid>
+    </Viewbox>
 </UserControl>
