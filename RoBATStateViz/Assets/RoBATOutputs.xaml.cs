@@ -127,7 +127,7 @@ namespace RoBATStateViz.Assets
                 var dataContext = ellipse.DataContext;
 
                 Type dcType = dataContext?.GetType();
-                PropertyInfo dcPropInfo = dcType.GetProperty($"Output{ellipse.Name.Replace("EllipseO", "")}");
+                PropertyInfo dcPropInfo = dcType.GetProperty($"Output{ellipse.Name.Substring(ellipse.Name.Length-1)}");
 
                 bool? currentValue = dcPropInfo?.GetValue(dataContext) as bool?;
 
